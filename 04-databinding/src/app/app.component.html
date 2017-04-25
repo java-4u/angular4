@@ -1,0 +1,46 @@
+<h1>
+  {{title}}
+</h1>
+<hr/>
+<h1>Data Binding </h1>
+	<table border=1>
+		<tr>
+			<td>Id</td>
+			<td>Name</td>
+			<td>Age</td>
+			<td>Active</td>
+		</tr>
+		<tr>
+			<td>{{person.id}}</td>
+			<td>{{person.name}}</td>
+			<td>{{person.age}}</td>
+			<td>
+				{{person.active}}
+				<div *ngIf="person.active">Text to show</div>
+
+			</td>
+		</tr>
+	</table>
+<hr/>
+<h1>Data Binding with *NgFor  *NgIf </h1>
+<ng-template #inactiveId><td>false</td></ng-template>
+
+<ng-template #ifCond>*NgIf </ng-template>
+<ng-template #ifCondNot>*NgIf Not</ng-template>
+
+<p *ngIf="condition; then ifCond else ifCondNot">wew</p>
+<br/><br/>
+<table border=1>
+		<tr>
+			<td>Id</td>
+			<td>Name</td>
+			<td>Age</td>
+			<td>Active</td>
+		</tr>
+		<tr *ngFor = "let p of persons" >
+			<td>{{p.id}}</td>
+			<td>{{p.name}}</td>
+			<td>{{p.age}}</td>
+			<td *ngIf="p.active else inactiveId">{{p.active}}</td>
+		</tr>
+</table>
