@@ -17,6 +17,14 @@ Below is the list of examples
 * 01-first-app
 * 02-custom-component
 * 03-routing
+* 04-databinding
+* 05-button-click
+* 06-pipes
+* 07-form
+* 08-form - model driven
+* 09-form - model driven - validation
+* 10-services
+* 11-http-service
 
 
 
