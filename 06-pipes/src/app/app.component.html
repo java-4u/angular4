@@ -1,0 +1,31 @@
+
+<h1>
+  {{example}}  {{title}}
+</h1>
+<hr/>
+<H1>UpperCase Names List</H1>
+<table border=0>
+		<tr>
+			<td><input [(ngModel)]="newTechnology" type="text" placeholder="Enter Name" /></td>
+			<td><button (click)="addTechnology()">ADD</button></td>
+		</tr>
+		<tr *ngFor = "let t of technologys;" >
+			<td>{{t | uppercase}}</td>
+			<td><button (click)="removeTechnology(i)">X</button></td>
+			
+		</tr>
+</table>
+
+<hr/>
+<H1>Lowercase Names List</H1>
+<table border=0>
+		<tr>
+			<td><input [(ngModel)]="newTechnology" type="text" placeholder="Enter Name" /></td>
+			<td><button (click)="addTechnology()">ADD</button></td>
+		</tr>
+		<tr *ngFor = "let t of technologys;" >
+			<td>{{t | lowercase}}</td>
+			<td><button (click)="removeTechnology(i)">X</button></td>
+			
+		</tr>
+</table>

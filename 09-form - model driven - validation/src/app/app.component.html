@@ -1,0 +1,39 @@
+
+<h1>
+  {{example}}  {{title}}
+</h1>
+<hr/>
+<form [formGroup] ="form" (ngSubmit)="onSignUp(form.value)">
+	<table border=0>
+		<tr>
+			<td>Name : </td>
+			<td><input type="text" placeholder="Enter Name" name="name" formControlName="name"/> Characters (min : 3, max : 5)</td>
+		</tr>
+		<tr>
+			<td>Email : </td>
+			<td><input type="text" placeholder="Enter Email" name="email" formControlName="email" /> Characters (min : 3)</td>
+		</tr>
+		<tr >
+			<td></td>
+			<td><input type="submit" [disabled]="!form.valid" value="Sign Up" /></td>
+			
+		</tr>
+	</table>
+</form>
+
+
+
+<hr/>
+<H1>Form data </H1>
+<table border=0>
+	<tr>
+		<td>Name : </td>
+		<td>{{user.name}} </td>
+	</tr>
+		<tr>
+		<td>Email : </td>
+		<td>{{user.email}} </td>
+	</tr>
+		
+		
+</table>
